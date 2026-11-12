@@ -1,0 +1,347 @@
+
+/* =========================================
+   INQUIETUM
+   Espacio de participación de la comunidad
+========================================= */
+
+
+/* PORTADA */
+
+
+.inquietum-hero {
+    padding: 120px 0 130px;
+    background-color: var(--color-background);
+    border-bottom: 1px solid var(--color-border);
+    position: relative;
+}
+
+.inquietum-hero .container {
+    max-width: 1050px;
+}
+
+.inquietum-introduction {
+    max-width: 760px;
+    margin-top: 75px;
+    padding-top: 35px;
+    border-top: 1px solid var(--color-border);
+}
+
+.inquietum-introduction p {
+    margin-top: 20px;
+    color: var(--color-secondary);
+    font-size: 1.05rem;
+    line-height: 1.9;
+}
+
+.inquietum-introduction .inquietum-etymology {
+    margin-top: 0;
+    color: var(--color-accent);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.inquietum-introduction .inquietum-closing {
+    margin-top: 35px;
+    color: var(--color-accent);
+    font-family: var(--font-heading);
+    font-size: 1.65rem;
+    font-style: italic;
+}
+
+
+.inquietum-hero .container {
+    max-width: 950px;
+}
+
+
+.inquietum-hero h1 {
+    margin-top: 35px;
+    font-family: var(--font-heading);
+    font-size: clamp(4.5rem, 12vw, 10rem);
+    font-weight: 600;
+    line-height: 0.95;
+    letter-spacing: -6px;
+    color: var(--color-text);
+}
+
+.inquietum-title span {
+    color: var(--color-accent);
+}
+
+.inquietum-hero h2 {
+    margin-top: 30px;
+    font-family: var(--font-heading);
+    font-size: clamp(1.8rem, 3vw, 2.8rem);
+    font-weight: 400;
+}
+
+.inquietum-etymology {
+    margin-top: 14px;
+    color: var(--color-secondary);
+    font-size: 0.95rem;
+}
+
+.inquietum-introduction {
+    max-width: 760px;
+    margin-top: 65px;
+    padding-top: 35px;
+    border-top: 1px solid var(--color-border);
+}
+
+.inquietum-introduction h3 {
+    font-family: var(--font-heading);
+    font-size: 1.8rem;
+    font-weight: 500;
+    margin-bottom: 22px;
+}
+
+.inquietum-introduction p {
+    margin-top: 16px;
+    color: var(--color-secondary);
+    font-size: 1.05rem;
+    line-height: 1.9;
+}
+
+.inquietum-introduction .inquietum-closing {
+    margin-top: 30px;
+    color: var(--color-accent);
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    font-style: italic;
+}
+
+
+.inquietum-hero p:last-child {
+    max-width: 620px;
+    margin-top: 28px;
+    color: var(--color-secondary);
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+
+/* SECCIONES */
+
+.inquietum-hero + .section {
+    padding-top: 100px;
+}
+
+.inquietum-question {
+    margin-top: 35px;
+    padding: 55px;
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+}
+
+.inquietum-question h3 {
+    max-width: 780px;
+    font-family: var(--font-heading);
+    font-size: clamp(1.8rem, 4vw, 3rem);
+    font-weight: 500;
+    line-height: 1.25;
+}
+
+.inquietum-question p {
+    margin-top: 20px;
+    color: var(--color-secondary);
+    line-height: 1.7;
+}
+
+.inquietum-question .button {
+    display: inline-flex;
+    margin-top: 28px;
+}
+
+
+/* COMUNIDAD */
+
+.community-empty {
+    margin-top: 35px;
+    padding: 55px;
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    text-align: center;
+}
+
+.community-empty h3 {
+    font-family: var(--font-heading);
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+
+.community-empty p {
+    max-width: 600px;
+    margin: 15px auto 0;
+    color: var(--color-secondary);
+    line-height: 1.7;
+}
+
+
+/* ESPACIADO DE SECCIONES */
+
+#participar {
+    background-color: var(--color-background);
+}
+
+
+/* ADAPTACIÓN A MÓVILES */
+
+@media (max-width: 768px) {
+
+    .inquietum-hero {
+        padding: 85px 0 75px;
+    }
+
+   .inquietum-hero h1 {
+    font-size: clamp(3.5rem, 15vw, 6rem);
+    letter-spacing: -3px;
+}
+
+    .inquietum-question,
+    .community-empty {
+        padding: 30px 24px;
+    }
+
+}
+
+/* =========================================
+   TRANSICIÓN HACIA LA COMUNIDAD
+========================================= */
+
+.inquietum-hero + .section {
+    padding-top: 100px;
+    background-color: var(--color-surface);
+}
+
+.inquietum-hero + .section h2 {
+    max-width: 700px;
+    font-family: var(--font-heading);
+    font-size: clamp(2rem, 4vw, 3.2rem);
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+.inquietum-question {
+    margin-top: 40px;
+    padding: 55px;
+    background-color: #F3EFE8;
+    border: 1px solid var(--color-border);
+}
+
+.community-empty {
+    margin-top: 35px;
+    padding: 55px;
+    background-color: var(--color-background);
+    border: 1px solid var(--color-border);
+}
+
+/* IMAGEN PRINCIPAL DE EL ÁGORA */
+
+.agora-cover {
+    width: 100%;
+    height: 420px;
+    margin-bottom: 65px;
+    overflow: hidden;
+}
+
+.agora-cover img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .agora-cover {
+        height: 260px;
+        margin-bottom: 40px;
+    }
+}
+
+/* REDISEÑO EL ÁGORA */
+
+.agora-section {
+    padding: 100px 0 120px;
+    background-color: var(--color-surface);
+}
+
+.agora-heading {
+    max-width: 850px;
+    margin: 0 auto 75px;
+}
+
+.agora-heading h2 {
+    margin-top: 25px;
+    font-family: var(--font-heading);
+    font-size: clamp(4rem, 10vw, 8rem);
+    line-height: 1;
+    font-weight: 500;
+    letter-spacing: -5px;
+}
+
+.agora-heading h2 span {
+    color: var(--color-accent);
+}
+
+.agora-heading h3 {
+    margin-top: 30px;
+    font-family: var(--font-heading);
+    font-size: clamp(1.8rem, 3vw, 2.7rem);
+    font-weight: 400;
+}
+
+.agora-heading > p:last-child {
+    margin-top: 20px;
+    max-width: 600px;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--color-secondary);
+}
+
+.agora-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 28px;
+}
+
+.agora-card {
+    padding: 45px;
+    min-height: 300px;
+    background-color: var(--color-background);
+    border: 1px solid var(--color-border);
+}
+
+.agora-card h3 {
+    margin: 25px 0 15px;
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.agora-card p:not(.eyebrow) {
+    max-width: 450px;
+    line-height: 1.8;
+    color: var(--color-secondary);
+}
+
+.agora-card a {
+    display: inline-block;
+    margin-top: 25px;
+    color: var(--color-accent);
+}
+
+@media (max-width: 768px) {
+    .agora-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .agora-heading h2 {
+        font-size: 4rem;
+        letter-spacing: -2px;
+    }
+
+    .agora-card {
+        padding: 30px;
+    }
+}
