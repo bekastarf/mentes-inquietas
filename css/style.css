@@ -654,40 +654,41 @@ button {
 
 /* 9. PIE DE PÁGINA */
 
-.site-footer {
-    padding-block: 45px;
 
+.site-footer {
+    padding-top: 75px;
+    padding-bottom: 45px;
     border-top: 1px solid var(--color-border);
 }
-
 
 .footer-content {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
-    gap: 20px;
+    column-gap: 30px;
+    row-gap: 28px;
 }
-
 
 .footer-brand {
     font-family: var(--font-heading);
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     font-weight: 700;
 }
 
-
 .footer-content p {
     color: var(--color-secondary);
-    font-size: 0.78rem;
+    font-size: 0.82rem;
+    line-height: 1.7;
 }
-
 
 .copyright {
     width: 100%;
-    padding-top: 20px;
+    margin-top: 15px;
+    padding-top: 25px;
     border-top: 1px solid var(--color-border);
 }
+
 
 
 /* 10. ACCESIBILIDAD */
@@ -1308,17 +1309,26 @@ a:hover {
 ================================= */
 
 .inquietum-promo {
-    padding: 110px 0;
-    background-color: var(--color-surface);
-    border-top: 1px solid var(--color-border);
-    border-bottom: 1px solid var(--color-border);
+    padding: 100px 0;
+    background-color: #F3EBDD;
+    border: none;
+}
+.inquietum-promo-content {
+    max-width: 1180px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 0.85fr 1fr;
+    align-items: center;
+    gap: 85px;
 }
 
 .inquietum-promo-image {
     width: 100%;
     height: 390px;
+    padding: 12px;
+    border: 1px solid #b99b80;
     overflow: hidden;
-    margin-bottom: 65px;
+    margin: 0;
 }
 
 .inquietum-promo-image img {
@@ -1333,67 +1343,58 @@ a:hover {
     transform: scale(1.025);
 }
 
-.inquietum-promo-content {
-    max-width: 850px;
-}
-
-.inquietum-promo-content h2 {
+.inquietum-promo-text h2 {
     margin-top: 20px;
     font-family: var(--font-heading);
-    font-size: clamp(4rem, 9vw, 7rem);
+    font-size: clamp(2.5rem, 4vw, 4rem);
     font-weight: 500;
-    line-height: 1;
-    letter-spacing: -4px;
+    line-height: 1.1;
+    letter-spacing: -2px;
 }
 
-.inquietum-promo-content h2 span {
-    color: var(--color-accent);
-}
-
-.inquietum-promo-content h3 {
-    margin-top: 30px;
-    font-family: var(--font-heading);
-    font-size: clamp(1.8rem, 3vw, 2.5rem);
-    font-weight: 400;
-    line-height: 1.3;
-}
-
-.inquietum-promo-content > p:not(.eyebrow) {
-    max-width: 650px;
+.inquietum-promo-text > p:not(.eyebrow) {
+    max-width: 480px;
     margin-top: 22px;
     color: var(--color-secondary);
-    font-size: 1.05rem;
-    line-height: 1.9;
+    font-size: 1rem;
+    line-height: 1.8;
 }
 
-.inquietum-promo-link {
-    display: inline-block;
-    margin-top: 35px;
-    padding-bottom: 8px;
-    border-bottom: 1px solid var(--color-accent);
-    color: var(--color-text);
-    font-size: 0.8rem;
-    font-weight: 700;
-    letter-spacing: 1.5px;
-    transition: color var(--transition);
+.inquietum-promo-text .button {
+    margin-top: 30px;
+}
+.about-layout {
+    gap: 90px;
+    padding-block: 30px;
 }
 
-.inquietum-promo-link:hover {
-    color: var(--color-accent);
+.about-content .eyebrow {
+    font-size: 16px;
+    margin-bottom: 24px;
 }
 
+.about-content .button {
+    margin-top: 24px;
+}
+
+/* Diseño para móviles */
 @media (max-width: 768px) {
     .inquietum-promo {
-        padding: 75px 0;
+        padding: 70px 0;
+    }
+
+    .inquietum-promo-content {
+        grid-template-columns: 1fr;
+        gap: 35px;
     }
 
     .inquietum-promo-image {
-        height: 250px;
-        margin-bottom: 45px;
+        height: 260px;
     }
 
-    .inquietum-promo-content h2 {
-        letter-spacing: -2px;
+    .inquietum-promo-text h2 {
+        font-size: clamp(2.3rem, 9vw, 3.2rem);
+        letter-spacing: -1px;
     }
 }
 /* =================================
@@ -1427,4 +1428,632 @@ a:hover {
 /* APARTADO ACTIVO DEL MENÚ */
 .main-navigation a.active {
     color: var(--color-accent);
+}
+/* PORTADA · INTRODUCCIÓN A REFLEXIONES */
+
+.reflections {
+    background-color: #F3EBDD;
+    padding-block: 100px;
+}
+
+.reflections .section-heading {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    align-items: end;
+    gap: 80px;
+    margin-bottom: 35px;
+}
+
+.reflections .section-heading h2 {
+    max-width: 650px;
+    font-size: clamp(2.8rem, 5vw, 4.5rem);
+}
+
+.reflections .section-description {
+    max-width: 350px;
+    padding-bottom: 8px;
+    line-height: 1.9;
+}
+
+.reflections .reflections-intro {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    padding-top: 30px;
+    border-top: 1px solid var(--color-border);
+}
+
+.reflections .reflections-intro p {
+    max-width: 550px;
+    color: var(--color-secondary);
+    line-height: 1.8;
+}
+
+@media (max-width: 768px) {
+    .reflections {
+        padding-block: 70px;
+    }
+
+    .reflections .section-heading {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .reflections .reflections-intro {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+/* =========================================
+   INQUIETA · PRESENTACIÓN EN INICIO
+========================================= */
+
+.inquieta-promo {
+    padding: 110px 0;
+    background: #f2e9df;
+}
+
+.inquieta-promo-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 75px;
+}
+
+.inquieta-promo-image {
+    position: relative;
+    padding: 18px;
+    border: 1px solid #b99b80;
+}
+
+.inquieta-promo-image img {
+    display: block;
+    width: 100%;
+    height: 440px;
+    object-fit: cover;
+    object-position: center 30%;
+}
+
+.inquieta-promo-text {
+    max-width: 520px;
+}
+
+.inquieta-promo-text .eyebrow {
+    color: #956047;
+}
+
+.inquieta-promo-text h2 {
+    font-family: "Playfair Display", serif;
+    font-size: clamp(32px, 4vw, 48px);
+    line-height: 1.2;
+    color: #49332c;
+    margin: 20px 0;
+}
+
+.inquieta-promo-text > p:not(.eyebrow) {
+    color: #6c5a50;
+    font-size: 16px;
+    line-height: 1.9;
+    margin-bottom: 28px;
+}
+
+@media (max-width: 768px) {
+    .inquieta-promo-content {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .inquieta-promo-image img {
+        height: 340px;
+    }
+
+    .inquieta-promo {
+        padding: 75px 0;
+    }
+}
+
+/* =========================================
+   PORTADA · MUSEO DE ARTE CONTEMPORÁNEO
+========================================= */
+
+.hero-museum {
+    position: relative;
+    min-height: 690px;
+    padding: 110px 0 100px;
+    overflow: hidden;
+    background: #eee8dc;
+    color: #292824;
+}
+
+.hero-museum .hero-content {
+    display: grid;
+    grid-template-columns: 1.1fr .9fr;
+    align-items: center;
+    gap: 60px;
+}
+
+.hero-museum .hero-copy {
+    max-width: 650px;
+}
+
+.hero-museum .eyebrow {
+    color: #8c5947;
+    letter-spacing: 3px;
+    font-size: 11px;
+    margin-bottom: 35px;
+}
+
+.hero-museum h1 {
+    font-family: Georgia, serif;
+    font-size: clamp(76px, 10vw, 135px);
+    line-height: .95;
+    letter-spacing: -7px;
+    font-weight: 500;
+    color: #292824;
+    margin-bottom: 35px;
+}
+
+.hero-museum h1 span {
+    display: block;
+    color: #9a5948;
+    font-style: italic;
+}
+
+.hero-museum .hero-description {
+    max-width: 510px;
+    color: #62594f;
+    font-size: 17px;
+    line-height: 1.9;
+    margin-bottom: 30px;
+}
+
+.hero-artwork {
+    position: relative;
+    min-height: 440px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #d4b9a0;
+    overflow: hidden;
+}
+
+.artwork-circle {
+    width: 310px;
+    height: 310px;
+    border-radius: 50%;
+    background: #a34f40;
+    position: relative;
+}
+
+.artwork-circle::before {
+    content: "";
+    position: absolute;
+    width: 190px;
+    height: 270px;
+    background: #293f50;
+    border-radius: 50% 50% 8% 8%;
+    transform: rotate(38deg);
+    top: 20px;
+    left: 70px;
+    mix-blend-mode: multiply;
+}
+
+.artwork-circle::after {
+    content: "";
+    position: absolute;
+    width: 125px;
+    height: 125px;
+    border: 2px solid #eee8dc;
+    border-radius: 50%;
+    top: 90px;
+    left: 90px;
+}
+
+.artwork-number {
+    position: absolute;
+    top: 22px;
+    left: 25px;
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: #49382e;
+}
+
+.artwork-caption {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    font-size: 10px;
+    line-height: 1.5;
+    letter-spacing: 2px;
+    text-align: right;
+    color: #49382e;
+}
+
+.hero-bottom-note {
+    position: absolute;
+    bottom: 22px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    text-align: center;
+    font-size: 10px;
+    letter-spacing: 3px;
+    color: #796d60;
+}
+
+@media (max-width: 768px) {
+    .hero-museum {
+        padding: 75px 0 90px;
+    }
+
+    .hero-museum .hero-content {
+        grid-template-columns: 1fr;
+        gap: 45px;
+    }
+
+    .hero-museum h1 {
+        font-size: clamp(65px, 15vw, 95px);
+        letter-spacing: -4px;
+    }
+
+    .hero-artwork {
+        min-height: 330px;
+    }
+
+    .artwork-circle {
+        width: 230px;
+        height: 230px;
+    }
+
+    .hero-bottom-note {
+        font-size: 8px;
+        letter-spacing: 1px;
+    }
+}
+/* =========================================
+   PORTADA · IDENTIDAD MENTES INQUIETAS
+========================================= */
+
+.hero-museum {
+    min-height: 620px;
+padding: 60px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    background: #eee8dc url("../assets/portada.jpg") center / cover no-repeat;
+    color: #292824;
+}
+.hero-museum::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(238, 232, 220, 0.65);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    z-index: 0;
+}
+
+.hero-brand {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+/* PORTADA · TEXTO E IMAGEN */
+
+.hero-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.hero-text {
+    text-align: center;
+    max-width: 900px;
+}
+
+.hero-image {
+    width: 100%;
+    height: 480px;
+    overflow: hidden;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: center;
+}
+.hero-eyebrow {
+    font-size: 11px;
+    letter-spacing: 3px;
+    color: #956047;
+    margin-bottom: 30px;
+    white-space: nowrap;
+}
+.hero-logo {
+    display: block;
+    width: 360px;
+    height: 360px;
+    max-width: 85vw;
+    object-fit: contain;
+    border-radius: 50%;
+    margin-bottom: 20px;
+   transform: translate(20px, 15px);
+   position: relative;
+top: 25px;
+}
+
+
+.hero-brand h1 {
+    font-family: Georgia, serif;
+    font-size: clamp(80px, 11vw, 160px);
+    font-weight: 500;
+    letter-spacing: -4px;
+    line-height: 1.1;
+    color: #302b27;
+    margin-bottom: 25px;
+    white-space: nowrap;
+}
+.hero-dot {
+    display: inline !important;
+    font-size: 1em;
+    color: #956047;
+    margin-left: 2px;
+    vertical-align: baseline;
+}
+.hero-tagline {
+    font-family: Georgia, serif;
+    font-size: clamp(22px, 2.5vw, 30px);
+    font-style: italic;
+    line-height: 1.5;
+    color: #875343;
+    margin-bottom: 35px;
+}
+
+
+.hero-edition {
+    font-size: 10px;
+    letter-spacing: 3px;
+    color: #887b6d;
+}
+
+@media (max-width: 768px) {
+    .hero-content {
+    grid-template-columns: 1fr;
+    gap: 35px;
+}
+
+.hero-text {
+    text-align: center;
+}
+
+.hero-image {
+    height: 350px;
+}
+
+.hero-brand h1 {
+    letter-spacing: -2px;
+}
+    .hero-museum {
+        min-height: 650px;
+        padding: 75px 20px;
+    }
+
+    .hero-logo {
+    width: 260px;
+    height: 260px;
+}
+
+    .hero-brand h1 {
+        letter-spacing: -2px;
+    }
+
+    .hero-eyebrow {
+        font-size: 9px;
+        letter-spacing: 2px;
+    }
+
+    .hero-tagline {
+        max-width: 330px;
+        line-height: 1.5;
+    }
+}
+/* INTRODUCCIÓN DE REFLEXIONES */
+
+/* INTRODUCCIÓN DE REFLEXIONES */
+
+.reflections-layout {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    align-items: center;
+    gap: 70px;
+    margin-top: 45px;
+}
+
+.reflections-content {
+    max-width: 520px;
+}
+
+.reflections-content .section-description {
+    margin-top: 25px;
+    margin-bottom: 30px;
+}
+
+.reflections-intro-image {
+    width: 100%;
+    height: 420px;
+    padding: 12px;
+    border: 1px solid #b99b80;
+    overflow: hidden;
+}
+
+.reflections-intro-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+.reflections-intro-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+@media (max-width: 768px) {
+    .reflections-intro {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .reflections-intro-text {
+        max-width: 100%;
+    }
+
+    .reflections-intro-image {
+        height: 320px;
+    }
+}
+.reflections-content h2 {
+    font-size: clamp(42px, 5vw, 64px);
+    line-height: 1.12;
+}
+/* QUIÉNES SOMOS · PORTADA */
+
+.about-layout {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    align-items: center;
+    gap: 65px;
+    padding-block: 15px;
+}
+
+.about-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 600px;
+    gap: 8px;
+}
+.about-image {
+    width: 100%;
+    height: 420px;
+    padding: 12px;
+    border: 1px solid #b99b80;
+    overflow: hidden;
+}
+
+.about-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.about-content h2 {
+    font-size: clamp(36px, 4vw, 52px);
+    line-height: 1.15;
+    margin-bottom: 18px;
+    color: var(--color-text);
+}
+
+.about-content p:not(.eyebrow) {
+    font-size: 18px;
+    line-height: 1.55;
+    color: var(--color-text);
+    max-width: 560px;
+    margin-bottom: 18px;
+}
+
+.about-content .eyebrow {
+    font-size: 14px;
+    color: var(--color-secondary);
+    margin-bottom: 14px;
+}
+
+.about-content .button {
+    margin-top: 10px;
+}
+/* QUIÉNES SOMOS · FONDO DE PORTADA */
+
+.about {
+    background-color: #F3EBDD;
+}
+/* UNIFICAR TIPOGRAFÍA DE LA PORTADA */
+
+.section h2,
+.inquietum-promo h2,
+.inquieta-promo h2 {
+    font-family: var(--font-heading);
+    color: var(--color-text);
+    font-weight: 600;
+    letter-spacing: -1px;
+}
+
+.section p,
+.inquietum-promo p,
+.inquieta-promo p {
+    font-family: var(--font-body);
+    color: var(--color-text);
+}
+/* UNIFICAR MINI TÍTULOS DE LA PORTADA */
+
+.inquietum-promo .eyebrow,
+.about .eyebrow {
+    color: #783f46 !important;
+    font-family: var(--font-body);
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+/* MISMO ESTILO PARA LOS MINI TÍTULOS DE TODA LA PORTADA */
+
+.hero-museum .eyebrow,
+.reflections .eyebrow,
+.inquieta-promo .eyebrow,
+.categories .eyebrow {
+    color: #783f46 !important;
+    font-family: var(--font-body);
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+/* IMAGEN · QUIÉNES SOMOS */
+
+.about-hero-image {
+    width: 100%;
+}
+
+.about-hero-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+/* DISTRIBUCIÓN · QUIÉNES SOMOS */
+
+.about-hero-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 65px;
+}
+
+.about-hero-image {
+    width: 100%;
+     border: none !important;
+    padding: 0 !important;
+}
+
+.about-hero-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
 }
